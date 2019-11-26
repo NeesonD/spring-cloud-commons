@@ -33,6 +33,9 @@ import org.springframework.util.Assert;
  */
 public class LoadBalancerInterceptor implements ClientHttpRequestInterceptor {
 
+	/**
+	 * 这个可以自定义实现
+	 */
 	private LoadBalancerClient loadBalancer;
 
 	private LoadBalancerRequestFactory requestFactory;

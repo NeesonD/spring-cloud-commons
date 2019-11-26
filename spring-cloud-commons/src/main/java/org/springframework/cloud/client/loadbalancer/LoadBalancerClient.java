@@ -23,7 +23,7 @@ import org.springframework.cloud.client.ServiceInstance;
 
 /**
  * Represents a client-side load balancer.
- *
+ * 这里只提供 接口，由 ribbon 自行实现，或者自定义  LoadBalancerClient
  * @author Spencer Gibb
  */
 public interface LoadBalancerClient extends ServiceInstanceChooser {

@@ -48,6 +48,7 @@ public class BlockingLoadBalancerClient implements LoadBalancerClient {
 	@Override
 	public <T> T execute(String serviceId, LoadBalancerRequest<T> request)
 			throws IOException {
+		// 通过 serviceId 获取 ServiceInstance
 		ServiceInstance serviceInstance = choose(serviceId);
 		if (serviceInstance == null) {
 			throw new IllegalStateException("No instances available for " + serviceId);

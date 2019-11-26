@@ -55,6 +55,11 @@ public class LoadBalancerAutoConfiguration {
 	@Autowired(required = false)
 	private List<LoadBalancerRequestTransformer> transformers = Collections.emptyList();
 
+	/**
+	 * 这个 bean 会在所有单例Bean初始化完成后回调该实现类的afterSingletonsInstantiated()
+	 * @param restTemplateCustomizers
+	 * @return
+	 */
 	@Bean
 	public SmartInitializingSingleton loadBalancedRestTemplateInitializerDeprecated(
 			final ObjectProvider<List<RestTemplateCustomizer>> restTemplateCustomizers) {
